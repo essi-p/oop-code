@@ -1,0 +1,8 @@
+import random
+
+def roll_dice():
+    return random.randint(1, 6)
+
+# Example usage:
+random_number = roll_dice()
+print("The rolled number is:", random_number)

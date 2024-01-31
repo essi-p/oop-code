@@ -1,0 +1,40 @@
+Class AlarmClock:
+    Initialize:
+        current_time = current system time
+        alarm_time = None
+        is_alarm_set = False
+        snooze_time = None
+        alarm_message = ""
+
+    Method set_alarm(time, message):
+        alarm_time = time
+        alarm_message = message
+        is_alarm_set = True
+
+    Method toggle_alarm():
+        is_alarm_set = not is_alarm_set
+
+    Method snooze(minutes):
+        snooze_time = current_time + minutes
+        is_alarm_set = True
+
+    Private Method update_time():
+        current_time = current system time
+
+    Private Method display_time():
+        Print current_time
+
+Function main():
+    clock = AlarmClock()
+
+    Loop:
+        clock.update_time()
+        clock.display_time()
+
+        If clock.is_alarm_set and clock.current_time >= clock.alarm_time:
+            Print "Alarm: ", clock.alarm_message
+            clock.is_alarm_set = False
+
+        If clock.snooze_time is not None and clock.current_time >= clock.snooze_time:
+            Print "Snooze: ", clock.alarm_message
+            clock.snooze_time = None

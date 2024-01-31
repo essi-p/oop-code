@@ -1,0 +1,40 @@
+def get_user_input():
+    numbers = []
+    while True:
+        user_input = int(input("Enter an integer (enter 0 to stop): "))
+        if user_input == 0:
+            break
+        numbers.append(user_input)
+    return numbers
+
+def count_negative_numbers(numbers):
+    negative_count = sum(1 for num in numbers if num < 0)
+    return negative_count
+
+def count_even_numbers(numbers):
+    even_count = sum(1 for num in numbers if num % 2 == 0)
+    return even_count
+
+def sum_positive_divisible_by_three(numbers):
+    positive_divisible_by_three_sum = sum(num for num in numbers if num > 0 and num % 3 == 0)
+    return positive_divisible_by_three_sum
+
+def main():
+    # Get user input
+    numbers = get_user_input()
+
+    # Count and print the number of negative integers
+    negative_count = count_negative_numbers(numbers)
+    print("Number of negative integers:", negative_count)
+
+    # Count and print the number of even integers
+    even_count = count_even_numbers(numbers)
+    print("Number of even integers:", even_count)
+
+    # Calculate and print the sum of positive integers divisible by three
+    positive_divisible_by_three_sum = sum_positive_divisible_by_three(numbers)
+    print("Sum of positive integers divisible by three:", positive_divisible_by_three_sum)
+
+if __name__ == "__main__":
+    main()
+

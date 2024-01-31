@@ -1,0 +1,31 @@
+def generate_ap(max_value):
+    ap_terms = [i for i in range(3, max_value + 1, 3)]
+    return ap_terms
+
+def count_terms(ap_terms):
+    return len(ap_terms)
+
+def sum_of_terms(ap_terms):
+    return sum(ap_terms)
+
+def sum_of_squared_terms(ap_terms):
+    return sum(i**2 for i in ap_terms)
+
+def main():
+    max_value = int(input("Enter the maximum value of the arithmetic progression (AP): "))
+
+    ap_terms = generate_ap(max_value)
+
+    print("Terms of the AP:", ap_terms)
+
+    num_of_terms = count_terms(ap_terms)
+    print("Number of terms:", num_of_terms)
+
+    sum_of_terms_result = sum_of_terms(ap_terms)
+    print("Sum of terms:", sum_of_terms_result)
+
+    sum_of_squared_terms_result = sum_of_squared_terms(ap_terms)
+    print("Sum of squared terms:", sum_of_squared_terms_result)
+
+if __name__ == "__main__":
+    main()

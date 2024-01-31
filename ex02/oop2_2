@@ -1,0 +1,33 @@
+import random
+
+class Coin:
+    def __init__(self):
+        self.sideup = 'Heads'
+
+    def toss_the_coin(self):
+        result = random.randint(0, 2)
+        if result == 0:
+            self.sideup = 'Heads'
+        elif result == 1:
+            self.sideup = 'Tails'
+        elif result == 2:
+            self.sideup = 'Upright' 
+        elif result == 3:
+            self.sideup = 'Lost in Rabbit Hole'
+        else:
+            self.sideup = 'Lost in Space Wormhole'
+
+    def get_sideup(self):
+        return self.sideup
+
+def main():
+    my_coin = Coin()
+
+    print("This side is up:", my_coin.get_sideup())
+
+    print("Tossing the coin...")
+    my_coin.toss_the_coin()
+
+    print("Now this side is up:", my_coin.get_sideup())
+
+main()

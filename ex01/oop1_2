@@ -1,0 +1,29 @@
+import random
+
+# Initialize empty lists
+number_list = []
+string_list = []
+
+# Fill the number list with user input
+for _ in range(10):
+    user_number = float(input("Enter a number: "))
+    number_list.append(user_number)
+
+# Fill the string list with user input
+for _ in range(10):
+    user_string = input("Enter a string: ")
+    string_list.append(user_string)
+
+# Print both lists
+print("Original Number List:", number_list)
+print("Original String List:", string_list)
+
+# Arrange numbers in the list from smallest to largest
+number_list.sort()
+
+# Arrange strings in alphabetical order
+string_list = sorted(string_list)
+
+# Print the sorted lists
+print("Sorted Number List:", number_list)
+print("Sorted String List:", string_list)
