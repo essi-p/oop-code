@@ -67,7 +67,6 @@ class CargoHold:
 
 
 if __name__ == "__main__":
-    # Testing the classes
     book = Item("ABC Book", 200)
     phone = Item("Nokia 3210", 100)
     brick = Item("Brick", 400)
