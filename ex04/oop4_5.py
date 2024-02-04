@@ -1,7 +1,7 @@
 class MagicPotion:
     def __init__(self, name: str):
         self.name = name 
-        self.ingredients = {} 
+        self.ingredients = {}
 
     def add_ingredient(self, ingredient: str, amount: float):
         self.ingredients[ingredient] = amount
