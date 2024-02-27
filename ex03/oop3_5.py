@@ -54,7 +54,7 @@ if __name__ == "__main__":
     terminal.eat_lunch_with_card(card, 4.5)
 
     card.deposit_money(100)
-    terminal.deposit_money_to_card(card, 5.3)
+    terminal.eat_lunch_with_card(card, 5.3)
 
     print(f"Funds available in the terminal: {terminal.cash_balance}")
     print(f"Regular lunches sold: {terminal.regular_lunches_sold}")
